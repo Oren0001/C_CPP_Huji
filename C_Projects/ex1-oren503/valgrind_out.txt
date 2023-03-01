@@ -1,0 +1,108 @@
+==3400== Memcheck, a memory error detector
+==3400== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3400== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==3400== Command: ./cipher
+==3400== Parent PID: 2904
+==3400== 
+--3400-- 
+--3400-- Valgrind options:
+--3400--    --leak-check=full
+--3400--    --show-leak-kinds=all
+--3400--    --tool=memcheck
+--3400--    --track-origins=yes
+--3400--    --verbose
+--3400--    --log-file=valgrind_out.txt
+--3400-- Contents of /proc/version:
+--3400--   Linux version 5.4.0-72-generic (buildd@lgw01-amd64-021) (gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04)) #80~18.04.1-Ubuntu SMP Mon Apr 12 23:26:25 UTC 2021
+--3400-- 
+--3400-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-rdtscp-sse3-avx
+--3400-- Page sizes: currently 4096, max supported 4096
+--3400-- Valgrind library directory: /usr/lib/valgrind
+--3400-- Reading syms from /home/orenmotiei/C_CPP/C_Projects/ex1-oren503/cipher
+--3400-- Reading syms from /lib/x86_64-linux-gnu/ld-2.27.so
+--3400--   Considering /lib/x86_64-linux-gnu/ld-2.27.so ..
+--3400--   .. CRC mismatch (computed 0ef8daab wanted 65bccefe)
+--3400--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.27.so ..
+--3400--   .. CRC is valid
+--3400-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--3400--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--3400--   .. CRC mismatch (computed 41ddb025 wanted 9972f546)
+--3400--    object doesn't have a symbol table
+--3400--    object doesn't have a dynamic symbol table
+--3400-- Scheduler: using generic scheduler lock implementation.
+--3400-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==3400== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-3400-by-orenmotiei-on-???
+==3400== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-3400-by-orenmotiei-on-???
+==3400== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-3400-by-orenmotiei-on-???
+==3400== 
+==3400== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==3400== don't want to do, unless you know exactly what you're doing,
+==3400== or are doing some strange experiment):
+==3400==   /usr/lib/valgrind/../../bin/vgdb --pid=3400 ...command...
+==3400== 
+==3400== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==3400==   /path/to/gdb ./cipher
+==3400== and then give GDB the following command
+==3400==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=3400
+==3400== --pid is optional if only one valgrind process is running
+==3400== 
+--3400-- REDIR: 0x4020d20 (ld-linux-x86-64.so.2:strlen) redirected to 0x580608c1 (???)
+--3400-- REDIR: 0x4020b00 (ld-linux-x86-64.so.2:index) redirected to 0x580608db (???)
+--3400-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--3400--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--3400--   .. CRC mismatch (computed 50df1b30 wanted 4800a4cf)
+--3400--    object doesn't have a symbol table
+--3400-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--3400--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--3400--   .. CRC mismatch (computed f893b962 wanted 95ee359e)
+--3400--    object doesn't have a symbol table
+==3400== WARNING: new redirection conflicts with existing -- ignoring it
+--3400--     old: 0x04020d20 (strlen              ) R-> (0000.0) 0x580608c1 ???
+--3400--     new: 0x04020d20 (strlen              ) R-> (2007.0) 0x04c34db0 strlen
+--3400-- REDIR: 0x401d540 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c35ee0 (strcmp)
+--3400-- REDIR: 0x4021260 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c394f0 (mempcpy)
+--3400-- Reading syms from /lib/x86_64-linux-gnu/libc-2.27.so
+--3400--   Considering /lib/x86_64-linux-gnu/libc-2.27.so ..
+--3400--   .. CRC mismatch (computed cb654923 wanted 8713c55a)
+--3400--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.27.so ..
+--3400--   .. CRC is valid
+--3400-- REDIR: 0x4edcb70 (libc.so.6:memmove) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edbe80 (libc.so.6:strncpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edce50 (libc.so.6:strcasecmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edb8d0 (libc.so.6:strcat) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edbeb0 (libc.so.6:rindex) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4ede5a0 (libc.so.6:rawmemchr) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edcce0 (libc.so.6:mempcpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edcb10 (libc.so.6:bcmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edbe40 (libc.so.6:strncmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edb940 (libc.so.6:strcmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edcc40 (libc.so.6:memset) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4ef9ed0 (libc.so.6:wcschr) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edbde0 (libc.so.6:strnlen) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edb9b0 (libc.so.6:strcspn) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edcea0 (libc.so.6:strncasecmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edb980 (libc.so.6:strcpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edcfe0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edbee0 (libc.so.6:strpbrk) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edb900 (libc.so.6:index) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edbdb0 (libc.so.6:strlen) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4ee64a0 (libc.so.6:memrchr) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edcef0 (libc.so.6:strcasecmp_l) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edcae0 (libc.so.6:memchr) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4efac90 (libc.so.6:wcslen) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edc190 (libc.so.6:strspn) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edce20 (libc.so.6:stpncpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edcdf0 (libc.so.6:stpcpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4ede5d0 (libc.so.6:strchrnul) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4edcf40 (libc.so.6:strncasecmp_l) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--3400-- REDIR: 0x4eef110 (libc.so.6:__strrchr_sse2) redirected to 0x4c34790 (__strrchr_sse2)
+--3400-- REDIR: 0x4ed5a30 (libc.so.6:free) redirected to 0x4c32cd0 (free)
+==3400== 
+==3400== HEAP SUMMARY:
+==3400==     in use at exit: 0 bytes in 0 blocks
+==3400==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==3400== 
+==3400== All heap blocks were freed -- no leaks are possible
+==3400== 
+==3400== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3400== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
